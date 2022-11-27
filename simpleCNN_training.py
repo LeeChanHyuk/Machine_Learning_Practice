@@ -21,6 +21,7 @@ test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=128, shuffle=
 
 ################################### Model #######################################
 model = simple_CNN.simpleCNN()
+model.train()
 
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
